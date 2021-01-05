@@ -1,7 +1,7 @@
 const { Guild, Client } = require("discord.js");
 
 module.exports = {
-    name: 'kick', // TO-DO
+    name: 'kick',
     description: 'Kick someone from the current server.',
     guildOnly: true,
     permissions: 'KICK_MEMBERS',
