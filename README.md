@@ -2,7 +2,8 @@
 
 ![This is the README's header image :)](https://i.imgur.com/RYIJiwG.png)
 <hr>
-# About
+
+#About
 Tenshi is a Discord Bot written by me (Rico Z) in JavaScript using the Discord.JS module (https://discord.js.org/)
 It has various commands.
 
