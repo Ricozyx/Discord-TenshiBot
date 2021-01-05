@@ -6,7 +6,8 @@
 
 ## About
 Tenshi is a Discord Bot written by me (Rico Z) in JavaScript using the Discord.JS module (https://discord.js.org/)
-It has various commands.
+
+It also uses other modules such as node-fetch (https://www.npmjs.com/package/node-fetch) & got (https://www.npmjs.com/package/got) in various commands.
 
 
 ## Commands
