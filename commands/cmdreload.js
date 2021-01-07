@@ -1,8 +1,9 @@
+require('dotenv').config();
+
 module.exports = {
     name: 'cmdreload',
     aliases: ['cmdrefresh', 'cmdrenew'],
-	guildOnly: true,
-	permissions: 'BAN_MEMBERS',
+    creatorOnly: true,
     description: 'Reloads a command',
     execute(message, args) {
         if (!args.length) return message.channel.send(`[🚫] What command would you like to reload, ${message.author}?`);

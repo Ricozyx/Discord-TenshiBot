@@ -6,7 +6,7 @@ module.exports = {
     description: 'List all of Tenshi\'s commands or info about a specific command.',
     aliases: ['commands', '?'],
     usage: '[command name]',
-    cooldown: 5,
+    cooldown: 10,
     execute(message, args) {
         const data = [];
         const { commands } = message.client;

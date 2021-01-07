@@ -6,12 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "rico",
+  "author": "rico & april",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
+    "eslint": "^7.17.0",
     "got": "^11.8.1",
-    "node-fetch": "^2.6.1"
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "os-utils": "0.0.14"
   }
 }

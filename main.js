@@ -9,7 +9,8 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
 const cooldowns = new Discord.Collection();
-const got = require('got')
+const got = require('got');
+const { timeStamp } = require('console');
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -17,12 +18,15 @@ client.login(process.env.TOKEN);
 
 client.on('ready', () => {
     console.log(`🥂  Succesfully launched ${client.user.tag}`);
+    client.user.setPresence({ activity: { name: `the stars tonight.`, type: "WATCHING" }, status: "dnd" });
 });
 
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     client.commands.set(command.name, command);
 }
+
+// Checks if message starts with the set prefix, otherwise ignore.
 client.on('message', message => {
     if (!message.content.startsWith(process.env.PREFIX) || message.author.bot) return;
 
@@ -37,6 +41,10 @@ client.on('message', message => {
 
     if (command.guildOnly && message.channel.type === 'dm') {
         return message.reply('[🚫] That is a server only command.');
+    }
+
+    if (command.creatorOnly && message.member.id !== process.env.OWNERID) {
+        return message.reply('[🚫] Only the owner of this bot can execute that command.');
     }
 
     if (command.permissions) {

@@ -8,6 +8,7 @@ const replies = [
 module.exports = {
     name: '8ball',
     description: 'The 8ball knows all, right?',
+    cooldown: 5,
     args: true,
     execute(message, args) {
         let rand = Math.floor(Math.random() * replies.length);
