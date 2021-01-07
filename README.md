@@ -45,3 +45,6 @@ It also uses other modules such as node-fetch (https://www.npmjs.com/package/nod
 ?help - DMs you a list of all commands
 
 ?help <command> - Replies to you with information about the command you put in
+
+<hr>
+![Example GIF](https://itsri.co/assets/images/Tenshi_Preview.gif)
