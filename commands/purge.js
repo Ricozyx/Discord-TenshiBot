@@ -1,6 +1,8 @@
 module.exports = {
     name: 'purge',
-    aliases: ['prune', 'bulkdelete'],
+    aliases: ['prune', 'bulkdelete', 'clean'],
+	guildOnly: true,
+    permissions: 'MANAGE_MESSAGES',
     description: 'Deletes 2 to 100 messages at a time.',
     execute(message, args) {
         const amount = parseInt(args[0]);

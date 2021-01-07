@@ -1,15 +1,10 @@
 const Discord = require('discord.js');
 
-
-
 module.exports = {
     name: 'serverinfo',
     description: 'Displays various info about the server.',
+	guildOnly: true,
     execute(message, args) {
-
-
-
-
         let day = message.guild.createdAt.getDate()
         let month = 1 + message.guild.createdAt.getMonth()
         let year = message.guild.createdAt.getFullYear()
