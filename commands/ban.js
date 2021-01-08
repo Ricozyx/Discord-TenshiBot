@@ -1,7 +1,5 @@
-const { Guild, Client } = require("discord.js");
-
 module.exports = {
-    name: 'ban', 
+    name: 'ban',
     description: 'Ban someone from the current server.',
     guildOnly: true,
     permissions: 'BAN_MEMBERS',
