@@ -11,6 +11,15 @@ It also uses other modules such as node-fetch (https://www.npmjs.com/package/nod
 
 
 ## Commands
+?botinfo - Displays various information about the bot
+
+?setstatus - Sets the bot it's activity status
+
+?uptime - Shows the bots current uptime
+
+?userinfo - Displays in-depth info about yourself or the user you specified
+
+?vpsinfo - Displays info about the server Tenshi is being hosted on. (OS, CPU Cores, CPU Usage %, Total RAM, RAM Usage, RAM Usage %)
 
 ?8ball - Ask 8ball any question and it shall answer
 
