@@ -17,7 +17,7 @@ module.exports = {
             .addField('Servers', `Chilling in ${message.client.guilds.cache.size} servers.`)
             .addField('Users', `Watching over ${message.client.users.cache.size} users.`)
             .addField('Developer', `**https://github.com/Ricozyx/**`, true)
-            .addField('Invite', `**https://itsri.co/tenshi-invite.html/**`, true)
+            .addField('Invite', `**https://itsri.co/tenshi-invite/**`, true)
             .addField('Uptime', ` ${days}d ${hours}h ${minutes}m ${seconds}s`, true)
             .setDescription(`Tenshi is a multi-purpose Discord bot. Tenshi is made in JavaScript with the use of Discord.JS.`)
             .setColor("BLURPLE")
