@@ -1,3 +1,4 @@
+
 # Tenshi Bot
 
 ![This is the README's header image :)](https://i.imgur.com/RYIJiwG.png)
@@ -26,51 +27,55 @@ Here are some stats of my server:
 
 
 ## Commands
-?botinfo - Displays various information about the bot
 
-?setstatus - Sets the bot it's activity status
+| Category      | Command| Description     |
+| :---        |    :----   |          :--- |
+|  Core     | ?ban       | Ban someone from the current server if you have the permission to do so.   |
+| Core   | ?kick       | Kick someone from the current server if you have the permission to do so.      |
+|Core|?botinfo|Provides various info about the bot such as total members and an invite link.
+| Core| ?help|Direct messages you all commands the bot can do.
+|---|---|---
+|Music|?play| Play the song you link from YouTube, SoundCloud or Spotify.
+|Music|?stop|Stops playing music.
+|Music|?pause|Pauses the playing music, so it can be resumed later.
+|Music|?resume|If the current music is paused it will resume it.
+|Music|?nowplaying|Shows you which song is currently playing.
+|Music|?loop|Puts the current song on repeat until you use ?loop again.
+|Music|?shuffle|Shuffles the current queue.
+|Music|?search| Search for a video on YouTube.
+|Music|?volume| Changes the volume between 1 - 100 %.
+|Music|?filter| Add a filter on the music. (such as 8D, bassboost & more!)
+|Music|?queue| Shows you all the songs in the queue.
+|Music|?cq | Clears the entire queue.
+|Music|?skip|Skips the current song to the next one in queue.
+|---|---|---
+|Fun|?8ball|Ask 8ball a question, and you shall receive an answer.
+|Fun|?baka|Tell someone they're being an idiot.
+|Fun|?bunny|Sends you a random bunny image.
+|Fun|?cat|Sends you a random cat image.
+|Fun|?dog|Sends you a random dog image.
+|Fun|?cuddle|Cuddle someone.
+|Fun|?feed| Feed someone.
+|Fun|?gif| Search for a gif with your input.
+|Fun|?goose|Sends you a random goose image.
+|Fun|?hug|Hug someone.
+|Fun|?kiss| Kiss someone.
+|Fun|?lizard|Sends you a random lizard image.
+|Fun|?meme|Sends you a random meme from /r/Memes.
+|Fun|?pat|Pat someone their head.
+|Fun|?poke|Poke someone.
+|Fun|?slap| Slap someone.
+|---|---|---
+|Misc|?avatar|Returns the URL of someones avatar.
+|Misc|?ping|Returns the bot its ping to the Discord servers.
+|Misc|?purge|Delete between 2 - 100 images.
+|Misc|?serverinfo|Shows you information about the current Discord server.
+|Misc|?uptime|Shows you how long Tenshi has been online.
+|Misc|?userinfo|Shows you information abou tthe user you put in.
 
-?uptime - Shows the bots current uptime
 
-?userinfo - Displays in-depth info about yourself or the user you specified
-
-?vpsinfo - Displays info about the server Tenshi is being hosted on. (OS, CPU Cores, CPU Usage %, Total RAM, RAM Usage, RAM Usage %)
-
-?8ball - Ask 8ball any question and it shall answer
-
-?avatar <user> - Sends you the avatar URL of the tagged user
-  
-?ban <user> - Bans the tagged user from your current server if you have BAN_MEMBERS permissions
-  
-?kick <user> - Kick the tagged user from your current server if you have KICK_MEMBERS permissions
-  
-?beep - Boop.
-
-?bunny - Sends a random cute bunny GIF
-
-?cat - Sends a random cute cat GIF
-
-?dog - Sends a random cute dog GIF
-
-?gif <searchterm> - Search for a gif using the TENOR API
-  
-?meme - Sends a random meme image from the /r/memes subreddit
-
-?ping - Returns the bots latence in ms
-
-?purge <amount> - Bulk delete between 2 and 100 messages
-  
-?say <input> - Let the bot say something
-
-?serverinfo - Returns various information about the current server
-
-?cmdreload <command> - Reload a command so restarting the bot from server isn't neccesary after changing a command (ADMIN only)
-
-?help - DMs you a list of all commands
-
-?help <command> - Replies to you with information about the command you put in
 
 ## Bot in action
 
-![Usage GIF / UI](https://i.imgur.com/4lhwcj9.gif)
+![Usage GIF / UI](https://i.imgur.com/in5VFOJ.gif)
 
