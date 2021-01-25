@@ -1,30 +1,54 @@
-console.log('🎬  Starting TenshiBot...');
-
 require('dotenv').config();
 
+const chalk = require('chalk');
 const fs = require('fs');
-const Discord = require('discord.js');
 
+const Discord = require('discord.js');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
-
 const cooldowns = new Discord.Collection();
+
 const got = require('got');
+
 const { timeStamp } = require('console');
 
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+// Music stuff
+const { Player } = require("discord-player");
+client.player = new Player(client);
+
+//Filters stuff
+client.config = require('./filter/filterconf');
+client.filters = client.config.filters;
+
+console.log(chalk.blue('[🎬]  Starting TenshiBot...'));
+
+//const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
+fs.readdirSync('./commands').forEach(dirs => {
+    const commandFiles = fs.readdirSync(`./commands/${dirs}`).filter(files => files.endsWith('.js'));
+
+    for (const file of commandFiles) {
+        const command = require(`./commands/${dirs}/${file}`);
+        console.log(chalk.yellow(`[⌛]  Loading command: ${file}`));
+        client.commands.set(command.name.toLowerCase(), command);
+    };
+});
+
+
+
+
 
 client.login(process.env.TOKEN);
 
 client.on('ready', () => {
-    console.log(`🥂  Succesfully launched ${client.user.tag}`);
-    client.user.setPresence({ activity: { name: `the stars tonight.`, type: "WATCHING" }, status: "dnd" });
+    console.log(chalk.green(`[🎊]  Succesfully launched ${client.user.tag}`));
+    client.user.setPresence({ activity: { name: `MAINTENANCE.`, type: "WATCHING" }, status: "dnd" });
 });
 
-for (const file of commandFiles) {
-    const command = require(`./commands/${file}`);
-    client.commands.set(command.name, command);
-}
+// for (const file of commandFiles) {
+//     const command = require(`./commands/${file}`);
+//     client.commands.set(command.name, command);
+// }
 
 // Checks if message starts with the set prefix, otherwise ignore.
 client.on('message', message => {
@@ -33,6 +57,7 @@ client.on('message', message => {
 
     const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
+
 
     const command = client.commands.get(commandName) ||
         client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
@@ -56,6 +81,7 @@ client.on('message', message => {
 
     if (!cooldowns.has(command.name)) {
         cooldowns.set(command.name, new Discord.Collection());
+
     }
 
     const now = Date.now();
@@ -82,3 +108,9 @@ client.on('message', message => {
 
 
 });
+const player = fs.readdirSync('./player').filter(file => file.endsWith('.js'));
+for (const file of player) {
+    console.log(chalk.yellowBright(`[🎶] Loading discord-player event: ${file}`));
+    const event = require(`./player/${file}`);
+    client.player.on(file.split(".")[0], event.bind(null, client));
+};

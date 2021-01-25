@@ -17,7 +17,7 @@ module.exports = {
             .setAuthor(`TenshiBot - Uptime`)
             .setThumbnail("https://hlassets.paessler.com/common/files/graphics/server-uptime.png")
             .setDescription(`**Tenshi** has been online for ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds.`)
-            .setColor("BLURPLE")
+            .setColor('#ff9eb5')
             .setTimestamp();
 
         message.channel.send(uptimeEmbed)

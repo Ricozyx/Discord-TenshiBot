@@ -4,7 +4,7 @@ require('dotenv').config();
 module.exports = {
     name: 'help',
     description: 'List all of Tenshi\'s commands or info about a specific command.',
-    aliases: ['commands', '?'],
+    aliases: ['commands'],
     usage: '[command name]',
     cooldown: 10,
     execute(message, args) {
@@ -42,5 +42,6 @@ module.exports = {
         data.push(`**Cooldown:** ${command.cooldown || 3} second(s)`);
 
         message.channel.send(data, { split: true });
+
     },
 };

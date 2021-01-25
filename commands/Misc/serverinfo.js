@@ -17,7 +17,7 @@ module.exports = {
             .addField("Region:", message.guild.region, true)
             .addField("Members:", message.guild.memberCount, true)
             .setTimestamp()
-            .setColor('BLURPLE')
+            .setColor('#ff9eb5')
             .setFooter('Powered by Tenshi', 'https://cdn.discordapp.com/avatars/795976317907763210/3bea682e06611cf19eca59078a62b42e.png')
 
         message.channel.send(serverEmbed)

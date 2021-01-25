@@ -3,19 +3,19 @@ const { Guild, Client } = require("discord.js");
 const superagent = require('superagent');
 
 module.exports = {
-    name: 'baka',
+    name: 'poke',
     cooldown: 5,
-    description: 'Baka!~',
+    description: 'Poke someone.',
     async execute(message, args) {
         if (!message.mentions.users.size) {
-            return message.reply('[🚫] You need to mention someone.');
+            return message.reply('[🚫] You need to mention someone to poke them. ');
         }
         const { body } = await superagent
-            .get("https://nekos.life/api/v2/img/baka");
+            .get("https://nekos.life/api/v2/img/poke");
 
         const embed = new Discord.MessageEmbed()
-            .setColor("BLURPLE")
-            .setTitle(`Baka~ ! ${message.mentions.users.first().username}`)
+            .setColor('#ff9eb5')
+            .setTitle(`${message.author.username} poked ${message.mentions.users.first().username}`)
             .setImage(body.url)
             .setFooter(`Powered by TenshiBot`);
         message.channel.send({ embed })

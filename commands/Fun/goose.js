@@ -11,7 +11,7 @@ module.exports = {
             .get("https://nekos.life/api/v2/img/goose");
 
         const embed = new Discord.MessageEmbed()
-            .setColor("BLURPLE")
+            .setColor('#ff9eb5')
             .setTitle(`${message.author.username}, here is your goose pic.`)
             .setImage(body.url)
             .setFooter(`Powered by TenshiBot`);

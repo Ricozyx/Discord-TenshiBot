@@ -3,21 +3,21 @@ const { Guild, Client } = require("discord.js");
 const superagent = require('superagent');
 
 module.exports = {
-    name: 'kiss',
+    name: 'pat',
     cooldown: 5,
-    description: 'Kiss someone.',
+    description: 'Pat someone.',
     async execute(message, args) {
         if (!message.mentions.users.size) {
-            return message.reply('[🚫] You need to mention someone to kiss them. ');
+            return message.reply('[🚫] You need to mention someone to pat them.');
         }
         const { body } = await superagent
-            .get("https://nekos.life/api/v2/img/kiss");
+            .get("https://nekos.life/api/v2/img/pat");
 
         const embed = new Discord.MessageEmbed()
-            .setColor("BLURPLE")
-            .setTitle(`${message.author.username} just kissed  ${message.mentions.users.first().username}`)
+            .setColor('#ff9eb5')
+            .setTitle(`${message.author.username} just patted ${message.mentions.users.first().username} >_<`)
             .setImage(body.url)
-            .setFooter(`😳 Powered by TenshiBot`);
+            .setFooter(`Powered by TenshiBot`);
         message.channel.send({ embed })
     }
 };
