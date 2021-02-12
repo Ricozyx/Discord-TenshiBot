@@ -20,7 +20,7 @@
     "node-fetch": "^2.6.1",
     "os-utils": "0.0.14",
     "superagent": "^6.1.0",
-    "yt-search": "^2.5.1",
+    "yt-search": "^2.7.3",
     "ytdl-core": "^4.4.5",
     "ytdl-core-discord": "^1.2.5"
   }
