@@ -78,4 +78,4 @@ Here are some stats of my server:
 ## Bot in action
 
 ![Usage GIF / UI](https://i.imgur.com/in5VFOJ.gif)
-
+![Botinfo](https://i.imgur.com/94Kx9MG.png)
