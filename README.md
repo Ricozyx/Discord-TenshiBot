@@ -8,7 +8,7 @@
 ## About
 Tenshi is a Discord Bot written by me (Rico Z) in JavaScript using the Discord.JS module (https://discord.js.org/)
 
-It also uses other modules such as node-fetch (https://www.npmjs.com/package/node-fetch) & got (https://www.npmjs.com/package/got) in various commands.
+As of right now, TenshiBot is serving over 10.000+ users! Thanks for the support.
 
 You can invite Tenshi to your own server via: https://itsri.co/tenshibot/
 
@@ -19,11 +19,11 @@ Tenshi is hosted 24/7 (always online!) on one of my servers.
 
 Here are some stats of my server:
 
-- Located in: Lithuania
-- OS: CentOS 8
-- CPU: Intel® Xeon® Processor E5-2687W v3
-- RAM: 4GB DDR4
-- Internetspeed: 100 Mbps
+- Located in: New York City, United States
+- OS: Ubuntu 20.04 LTS
+- CPU: AMD Ryzen™ 9 3900x
+- RAM: 6GB DDR4
+- Internetspeed: 1000 Mb/s (1GB/s)
 
 
 ## Commands
