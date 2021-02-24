@@ -21,7 +21,8 @@ Here are some stats of my server:
 
 - Located in: New York City, United States
 - OS: Ubuntu 20.04 LTS
-- CPU: AMD Ryzen™ 9 3900x
+- CPU1: Intel® Xeon® Processor E5-1650 v4
+- CPU2: Intel® Xeon® Processor E5-1650 v3
 - RAM: 6GB DDR4
 - Internetspeed: 1000 Mb/s (1GB/s)
 
