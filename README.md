@@ -8,7 +8,7 @@
 ## About
 Tenshi is a Discord Bot written by me (Rico Z) in JavaScript using the Discord.JS module (https://discord.js.org/)
 
-As of right now, TenshiBot is serving over 10.000+ users! Thanks for the support.
+As of right now, TenshiBot is serving over 12.000+ users! Thanks for the support.
 
 You can invite Tenshi to your own server via: https://itsri.co/tenshibot/
 
