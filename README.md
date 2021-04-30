@@ -50,6 +50,7 @@ Here are some stats of my server:
 |Music|?cq | Clears the entire queue.
 |Music|?skip|Skips the current song to the next one in queue.
 |---|---|---
+|Fun|?day|Tells you what day it is today. mufasaPls
 |Fun|?8ball|Ask 8ball a question, and you shall receive an answer.
 |Fun|?baka|Tell someone they're being an idiot.
 |Fun|?bunny|Sends you a random bunny image.
