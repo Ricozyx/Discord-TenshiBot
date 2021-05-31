@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 require('dotenv').config();
 
 
@@ -12,11 +13,16 @@ module.exports = {
         const { commands } = message.client;
 
         if (!args.length) {
-            data.push('Here\'s a list of all my commands:');
-            data.push(commands.map(command => command.name).join(', '));
-            data.push(`\nType \`${process.env.PREFIX}help [command name]\` to get info on a specific command.`);
+            const helpEmbed = new Discord.MessageEmbed()
+            .setTitle(`TenshiBot - Help`)
+            .addField("Commands:", commands.map(command => command.name).join(', '), true)
+            .addField("Extra:", `\nType \`${process.env.PREFIX}help [command name]\` to get info on a specific command.`, true)
+            .setTimestamp()
+            .setColor('#ff9eb5')
+            .setFooter('Powered by Tenshi', 'https://cdn.discordapp.com/avatars/795976317907763210/3bea682e06611cf19eca59078a62b42e.png')
 
-            return message.author.send(data, { split: true })
+
+            return message.author.send(helpEmbed)
                 .then(() => {
                     if (message.channel.type === 'dm') return;
                     message.reply('I\'ve sent you a DM with all my commands.');
