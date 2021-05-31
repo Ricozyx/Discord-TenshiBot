@@ -67,6 +67,7 @@ Here are some stats of my server:
 |Fun|?pat|Pat someone their head.
 |Fun|?poke|Poke someone.
 |Fun|?slap| Slap someone.
+|Fun|?day| Tells you what day it is, with a surprise on everyones favorite day.
 |---|---|---
 |Misc|?avatar|Returns the URL of someones avatar.
 |Misc|?ping|Returns the bot its ping to the Discord servers.
@@ -74,7 +75,8 @@ Here are some stats of my server:
 |Misc|?serverinfo|Shows you information about the current Discord server.
 |Misc|?uptime|Shows you how long Tenshi has been online.
 |Misc|?userinfo|Shows you information abou tthe user you put in.
-
+|---|---|---
+|Reminder|?remind|Lets Tenshi remind you in a set time. 
 
 
 ## Bot in action
