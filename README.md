@@ -3,6 +3,7 @@
 
 ![This is the README's header image :)](https://i.imgur.com/RYIJiwG.png)
 <hr>
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G04W0H7)
 
 ## About
