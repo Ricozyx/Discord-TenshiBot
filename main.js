@@ -22,8 +22,6 @@ client.filters = client.config.filters;
 
 console.log(chalk.blue('[🎬]  Starting TenshiBot...'));
 
-//const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
-
 fs.readdirSync('./commands').forEach(dirs => {
     const commandFiles = fs.readdirSync(`./commands/${dirs}`).filter(files => files.endsWith('.js'));
 
@@ -34,21 +32,12 @@ fs.readdirSync('./commands').forEach(dirs => {
     };
 });
 
-
-
-
-
 client.login(process.env.TOKEN);
 
 client.on('ready', () => {
     console.log(chalk.green(`[🎊]  Succesfully launched ${client.user.tag}`));
-    client.user.setPresence({ activity: { name: `MAINTENANCE.`, type: "WATCHING" }, status: "dnd" });
+    client.user.setPresence({ activity: { name: `ko-fi.com/ricozyx`, type: "WATCHING" }, status: "dnd" });
 });
-
-// for (const file of commandFiles) {
-//     const command = require(`./commands/${file}`);
-//     client.commands.set(command.name, command);
-// }
 
 // Checks if message starts with the set prefix, otherwise ignore.
 client.on('message', message => {
@@ -73,7 +62,7 @@ client.on('message', message => {
     }
 
     if (command.permissions) {
-        const authorPerms = message.channel.permissionsFor(message.client.user);
+        const authorPerms = message.channel.permissionsFor(message.author);
         if (!authorPerms || !authorPerms.has(command.permissions)) {
             return message.reply('[🚫] You don\'t have permissions to execute this command.');
         }
